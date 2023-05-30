@@ -9,7 +9,8 @@ class Homescreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
-        child: Column(
+        child: SingleChildScrollView(
+            child: Column(
           children: [
             Image.asset("assets/images/newlogo.png"),
             SizedBox(
@@ -29,7 +30,7 @@ class Homescreen extends StatelessWidget {
               ),
             )
           ],
-        ),
+        )),
       ),
     );
   }
