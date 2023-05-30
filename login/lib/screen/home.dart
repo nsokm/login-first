@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/screen/login.dart';
 import 'package:login/screen/register.dart';
 
 class Homescreen extends StatelessWidget {
@@ -33,7 +34,13 @@ class Homescreen extends StatelessWidget {
               child: ElevatedButton.icon(
                 icon: Icon(Icons.login),
                 label: Text("เข้าสู่ระบบ", style: TextStyle(fontSize: 20)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ));
+                },
               ),
             )
           ],
