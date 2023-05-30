@@ -8,6 +8,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,19 +17,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
         body: Container(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(20.0),
             child: SingleChildScrollView(
               child: Form(
                 child: Column(
+                  key: formKey,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("อีเมล", style: TextStyle(fontSize: 20)),
-                    TextFormField(),
+                    TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                    ),
                     SizedBox(
                       height: 15,
                     ),
                     Text("รหัสผ่าน", style: TextStyle(fontSize: 20)),
-                    TextFormField(),
+                    TextFormField(
+                      obscureText: true,
+                    ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
