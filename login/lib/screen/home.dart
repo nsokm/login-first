@@ -11,6 +11,7 @@ class Homescreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
         child: Column(
           children: [
+            Image.asset("assets/images/newlogo.png"),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
