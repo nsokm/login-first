@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/screen/register.dart';
 
 class Homescreen extends StatelessWidget {
   @override
@@ -18,7 +19,13 @@ class Homescreen extends StatelessWidget {
               child: ElevatedButton.icon(
                 icon: Icon(Icons.add),
                 label: Text("สร้างบัญชีผู้ใช้", style: TextStyle(fontSize: 20)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return RegisterScreen();
+                    },
+                  ));
+                },
               ),
             ),
             SizedBox(
