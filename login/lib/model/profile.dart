@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-
 class Profile {
-  late String email;
-  late String password;
+  String email;
+  String password;
+  Profile(this.email, this.password);
 }
